@@ -1,7 +1,7 @@
 # ctfd-deploy
 
 ## Deploy  
-1. Ensure you are in the **lacework-dev/ctfd-deploy** repo.  
+1. Ensure you are in the **<ORG>/ctfd-deploy** repo.  
 1. Select **Actions** from the menu.  
 1. Select the **Deploy CTFD Instance** workflow on the left side pane.   
 1. Click the **Run workflow** menu on the right side of the screen.  
@@ -55,18 +55,18 @@ ctfd_publicip = "<PUBLIC IP ADDRESS>"
 ```
 
 ## Login to CTF
-Each CTF instance includes a default admin user with the credential **admin** and password **Lacework123!**
+Each CTF instance includes a default admin user with the credential **admin** and password **L*******1**!**
 
 ## Adding Users
 1. Click the wrench icon to access the admin tab, then Users, then the '+' icon to create CTF user(s)
-1. Participants will need access to a Lacework tenant such as partner-demo. SEs can create a session on the [Workshop Event Engine](https://ee.laceworkalliances.com/sessions/) and share the resulting link with participants at the start of the event. This will enable each participant to self register and create their Lacework tenant login, thus allowing for last minute attendees to be included.
-1. Upon completion of the CTF event, the SE must delete the users added to the Lacework tenant. We hope to automate this in the future.
+1. Participants will need access to a <ORG> tenant such as partner-demo. SEs can create a session on the [Workshop Event Engine](https://ee.laceworkalliances.com/sessions/) and share the resulting link with participants at the start of the event. This will enable each participant to self register and create their <ORG> tenant login, thus allowing for last minute attendees to be included.
+1. Upon completion of the CTF event, the SE must delete the users added to the <ORG> tenant. We hope to automate this in the future.
 
 The size of the CTF instance will be adjusted to suite the quantity of participants indicated. For larger events, please contact the CTF team.
 
 ---
 ### CTFD-Deploy Management
-As CTF build files are updated (periodically) the .zip file must be added to the AWS Lightsail storage bucket 'ctf-objects' (account: 552339396365) **and** the repo Terraform `variables.tf` file must be updated to reflect the new file name.  
+As CTF build files are updated (periodically) the .zip file must be added to the AWS Lightsail storage bucket 'ctf-objects' (account: <ACCNT>) **and** the repo Terraform `variables.tf` file must be updated to reflect the new file name.  
 
 Should net new questionbank files be developed, the GitHub action `deploy.yml` file must be updated to add additional drop-down menu items **and** the Terraform `variables.tf` file must be updated to include the additional variable map entry.
 
