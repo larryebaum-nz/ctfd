@@ -5,8 +5,7 @@
 1. Select **Actions** from the menu.  
 1. Select the **Deploy CTFD Instance** workflow on the left side pane.   
 1. Click the **Run workflow** menu on the right side of the screen.  
-
-![image](https://user-images.githubusercontent.com/6776768/221995886-fba527d0-f5c0-4118-b154-47e87e0b1898.png)
+![image](https://github.com/larryebaum/ctfd/assets/6776768/3e8e8948-b8be-49ca-a1dc-20f7f2a24a51)
 
 
 Fill in the required fields and click the green `Run workflow`  
