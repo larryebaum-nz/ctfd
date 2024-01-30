@@ -34,7 +34,6 @@ on:
         options:
         - 1-15
         - 16-30
-        - >31
 permissions:
   contents: read
   pull-requests: write
