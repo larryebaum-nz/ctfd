@@ -1,5 +1,4 @@
 name: CTF Deploy Instance
-
 on:
   workflow_dispatch:
     inputs:
@@ -31,7 +30,7 @@ on:
         - a
         - b
         default: "a"
-     size:
+      size:
         type: choice
         description: Number of participants
         options:
