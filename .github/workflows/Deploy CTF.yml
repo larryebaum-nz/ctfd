@@ -38,8 +38,9 @@ on:
         - 16-30
         default: "1-15"
 permissions:
+  id-token: write #added
   contents: read
-  pull-requests: write
+#  pull-requests: write
 
 jobs:
   apply:
