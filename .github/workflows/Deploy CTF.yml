@@ -27,8 +27,8 @@ on:
         type: choice
         description: Select a question bank category
         options:
-        - a
-        - b
+        - Customer Event
+        - Partner Event
         default: "a"
       size:
         type: choice
