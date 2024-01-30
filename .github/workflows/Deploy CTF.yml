@@ -53,3 +53,13 @@ jobs:
       
       - name: terraform apply
         uses: dflook/terraform-apply@v1
+        with:
+          variables: |
+            ctfdName = "${{ github.event.inputs.ctfdName }}"
+            owner = "${{ github.event.inputs.owner }}"
+            ttl = "${{ github.event.inputs.ttl }}"
+            requester = "${{ github.event.inputs.requester }}"
+            customer = "${{ github.event.inputs.customer }}"
+            questionbank = "${{ github.event.inputs.questionbank }}"
+            size = "${{ github.event.inputs.size }}"
+            
