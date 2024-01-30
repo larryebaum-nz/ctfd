@@ -1,4 +1,4 @@
-name: Apply terraform plan
+name: CTF Deploy Instance
 
 on:
   workflow_dispatch:
@@ -6,7 +6,6 @@ on:
       email:
         type: string
         description: Email of requester
-    inputs:
       prefix:
         type: string
         description: CTF instance prefix (must begin with alphabetic)        
