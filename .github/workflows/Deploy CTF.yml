@@ -1,9 +1,16 @@
 name: Apply terraform plan
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+    inputs:
+      name:
+        type: choice
+        description: who to greet
+        options:
+        - monalisa
+        - cschleiden
+      message:
+        required: true
 
 permissions:
   contents: read
