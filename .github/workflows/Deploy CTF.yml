@@ -53,5 +53,3 @@ jobs:
       
       - name: terraform apply
         uses: dflook/terraform-apply@v1
-        with:
-          path: terraform
