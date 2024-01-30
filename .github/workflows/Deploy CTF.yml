@@ -29,7 +29,7 @@ on:
         options:
         - Customer Event
         - Partner Event
-        default: "a"
+        default: "Customer Event"
       size:
         type: choice
         description: Number of participants
