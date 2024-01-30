@@ -3,15 +3,15 @@ name: CTF Deploy Instance
 on:
   workflow_dispatch:
     inputs:
-      email:
+      requester:
         type: string
         description: Email of requester
         required: true
-      prefix:
+      cftdName:
         type: string
         description: CTF instance prefix (must begin with alphabetic)
         required: true        
-      TTL:
+      ttl:
         type: choice
         description: Hours until self-destruct
         options:
@@ -20,18 +20,18 @@ on:
         - 48
         - 72
         default: "24"
-      customerName:
+      customer:
         type: string
         description: Customer
         required: true        
-      questionBank:
+      questionbank:
         type: choice
         description: Select a question bank category
         options:
         - a
         - b
         default: "a"
-      participantCount:
+     size:
         type: choice
         description: Number of participants
         options:
