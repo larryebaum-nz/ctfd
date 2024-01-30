@@ -50,7 +50,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      
+      - name: Configure AWS credentials from OIDC
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          audience: sts.amazonaws.com.cn
+          aws-region: us-east-1
+          role-to-assume: arn:aws:iam::352542224701:role/github_actions      
       - name: terraform apply
         uses: dflook/terraform-apply@v1
         with:
