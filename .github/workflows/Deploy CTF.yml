@@ -3,15 +3,39 @@ name: Apply terraform plan
 on:
   workflow_dispatch:
     inputs:
-      name:
+      email:
+        type: string
+        description: Email of requester
+    inputs:
+      prefix:
+        type: string
+        description: CTF instance prefix (must begin with alphabetic)        
+      TTL:
         type: choice
-        description: who to greet
+        description: Hours until self-destruct
         options:
-        - monalisa
-        - cschleiden
+        - 24
+        - 36
+        - 48
+        - 72
       message:
         required: true
-
+      customerName:
+        type: string
+        description: Customer      
+      questionBank:
+        type: choice
+        description: Select a question bank category
+        options:
+        - a
+        - b
+      participantCount:
+        type: choice
+        description: Number of participants
+        options:
+        - 1-15
+        - 16-30
+        - >31
 permissions:
   contents: read
   pull-requests: write
@@ -19,7 +43,7 @@ permissions:
 jobs:
   apply:
     runs-on: ubuntu-latest
-    name: Apply terraform plan
+    name: Deploy CTF Instance
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
