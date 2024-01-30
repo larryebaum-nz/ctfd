@@ -6,9 +6,11 @@ on:
       email:
         type: string
         description: Email of requester
+        required: true
       prefix:
         type: string
-        description: CTF instance prefix (must begin with alphabetic)        
+        description: CTF instance prefix (must begin with alphabetic)
+        required: true        
       TTL:
         type: choice
         description: Hours until self-destruct
@@ -17,23 +19,25 @@ on:
         - 36
         - 48
         - 72
-      message:
-        required: true
+        default: "24"
       customerName:
         type: string
-        description: Customer      
+        description: Customer
+        required: true        
       questionBank:
         type: choice
         description: Select a question bank category
         options:
         - a
         - b
+        default: "a"
       participantCount:
         type: choice
         description: Number of participants
         options:
         - 1-15
         - 16-30
+        default: "1-15"
 permissions:
   contents: read
   pull-requests: write
